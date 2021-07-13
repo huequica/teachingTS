@@ -46,6 +46,18 @@ $ npm i -D ts-node
 $ npx ts-node EntryPoint.ts
 ```
 
+## npm scripts で長いコマンドを省略する
+
+`package.json` の `scripts` のなかに省略したいコマンドを入れることで `npm run build` などで代用できる
+
+```json:package.json
+  ~~~~~,
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc"
+  }
+```
+
 # TSの型の情報
 
 ```ts
